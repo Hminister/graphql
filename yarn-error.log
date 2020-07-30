@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\86159\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @bable/core @bable/cli @bable/preset-env @bable/plugin-transform-runtime @babel/runtime nodemon -D
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git\cmd;D:\mongodb\bin;;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Users\86159\AppData\Local\Microsoft\WindowsApps;;C:\Users\86159\AppData\Roaming\npm;D:\Microsoft VS Code\bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/@bable%2fcore: Not found
+      at Request.params.callback [as _callback] (C:\Users\86159\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66830:18)
+      at Request.self.callback (C:\Users\86159\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140464:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (C:\Users\86159\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141436:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (C:\Users\86159\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141358:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1129:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "babel-node",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
