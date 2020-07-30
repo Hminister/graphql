@@ -1,36 +1,35 @@
 import Koa from 'koa'
 import Router from 'koa-router'
 import graphlHTTP from 'koa-graphql'
-import { buildSchema } from 'graphql'
-import { nanoid } from 'nanoid'
-
+// import { buildSchema } from 'graphql'
+// import { nanoid } from 'nanoid'
+import schema from './schema'
 const app = new Koa()
 const router = new Router()
-const schema = buildSchema(`
-  type User {
-    id: ID!,
-    name: String,
-    age: Int
-  }
-  type Query {
-    user: User,
-    hello: String,
-  }
-`)
-const rootValue = {
-  hello: () => `hello World`,
-  user: () => ({
-    id: nanoid(),
-    name: 'jkljf',
-    age: 18,
-  }),
-}
+// const schema = buildSchema(`
+//   type User {
+//     id: ID!,
+//     name: String,
+//     age: Int
+//   }
+//   type Query {
+//     user: User,
+//     hello: String,
+//   }
+// `)
+// const rootValue = {
+//   hello: () => `hello World`,
+//   user: () => ({
+//     id: nanoid(),
+//     name: 'jkljf',
+//     age: 18,
+//   }),
+// }
 
 router.all(
   '/graphql',
   graphlHTTP({
     schema,
-    rootValue,
     graphiql: true,
   })
 )
