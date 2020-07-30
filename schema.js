@@ -1,26 +1,13 @@
-import { makeExecutableSchema } from 'graphql-tools'
-import { nanoid } from 'nanoid'
+import {
+  makeExecutableSchema,
+  mergeTypeDefs,
+  loadFilesSync,
+} from 'graphql-tools'
 
-const typeDefs = `
-  type User {
-    id: ID!,
-    name: String,
-    age: Int
-  }
+//自动查找graphql文件
+const typeDefs = mergeTypeDefs(loadFilesSync('./typeDefs'), { all: true })
 
-  type Query {
-    user: User
-  }
-`
-const resolvers = {
-  Query: {
-    user: () => ({
-      id: nanoid(),
-      name: 'sjkdasfh',
-      age: 25,
-    }),
-  },
-}
+const resolvers = mergeTypeDefs(loadFilesSync('./resolvers'))
 
 export default makeExecutableSchema({
   typeDefs,

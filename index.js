@@ -26,11 +26,12 @@ const router = new Router()
 //   }),
 // }
 
+//中间键
 router.all(
   '/graphql',
   graphlHTTP({
-    schema,
-    graphiql: true,
+    schema, //包含type和控制器
+    graphiql: true, //开发面板，测试
   })
 )
 
