@@ -1,11 +1,14 @@
 import { nanoid } from 'nanoid'
+import UserModel from '../model/UserModel'
 
 export default {
   Query: {
-    user: () => ({
-      id: nanoid(),
-      name: 'kjl',
-      age: 28,
-    }),
+    userList: () => UserModel.getAllUser(),
+  },
+  Mutation: {
+    createUser: (parent, args) => {
+      const user = new UserModel(args.name, args.age).create()
+      return user
+    },
   },
 }
